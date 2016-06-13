@@ -1,0 +1,22 @@
+{
+  "name": "whatapop",
+  "version": "1.0.0",
+  "description": "Versi�ón angular whatapop",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'npm run sparrest' 'npm run lite'",
+    "sparrest": "node node_modules/node-sparrest/node-sparrest.js",
+    "lite": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.6",
+    "lite-server": "^2.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0",
+    "node-sparrest": "0.0.10"
+  }
+}
