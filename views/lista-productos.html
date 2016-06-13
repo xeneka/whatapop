@@ -2,5 +2,7 @@
 
     <h3>Nombre:{{ productoSeleccionado.name }}</h3>
 
-    <a ng-link="['DetalleArticulo']">Detalles</a>
+    <a ng-link="['DetalleArticulo', { id: producto.id }]">Detalles</a>
 </div>
+
+

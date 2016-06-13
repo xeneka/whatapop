@@ -16,7 +16,7 @@ angular
 
             link: function(scope){
 
-                //console.log(scope);
+                console.log(scope);
                 scope.productoSeleccionado = scope.producto;
 
 

@@ -7,6 +7,17 @@ angular
         
         templateUrl:"views/detalle-articulo.html",
 
+        controller: function(){
+            var self=this;
+
+            self.$routerOnActivate = function(next) {
+                var id = next.params.id;
+                alert(id);
+            };
+
+    }
+
+
             
 
 
