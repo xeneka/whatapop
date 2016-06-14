@@ -7,26 +7,30 @@ angular
 
         templateUrl:"views/raiz.html",
 
-
-
-
-            $routeConfig:[{
+        $routeConfig:[{
                 name:"DetalleArticulo",
-                path:"/detalle-articulo.html",
+                path:"/detalle-articulo/:id",
                 component:"detalleArticulo",
 
             },
                 {
                  name:"ListadoProductos",
-                 path:"/listado-productos.html",
+                 path:"/listado-productos",
                  component:"listadoProductos",
                   useAsDefault: true
 
                 }
 
 
-            ]
-        
+            ],
+
+
+        controller:function(){
+            var self=this;
+
+           
+            
+        }
         
         
     }

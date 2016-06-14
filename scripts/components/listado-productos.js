@@ -6,6 +6,7 @@ angular
     .module("whatapop")
     .component("listadoProductos", {
 
+        
         templateUrl:"views/listado-productos.html",
 
 
@@ -32,6 +33,7 @@ angular
 
             self.updateFilter = function(){
 
+                
                 if (self.productoSeleccionado.length==0){
 
                     self.productos =totalProductos;

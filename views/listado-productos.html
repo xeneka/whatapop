@@ -1,1 +1,15 @@
-<lista-productos ng-repeat="item in $ctrl.productos" producto="item"></lista-productos>
+<br><br><br><br>
+
+<div class="row">
+
+    <input type="text" class="form-control" placeholder="Buscar" name="srch-term" id="srch-term" ng-model="$ctrl.productoSeleccionado">
+    <button class="btn btn-primary"  ng-click="$ctrl.updateFilter()"><i class="glyphicon glyphicon-search"></i></button>
+
+</div>
+
+<div class="row">
+    <!--<buscador></buscador>-->
+
+    <lista-productos ng-repeat="item in $ctrl.productos" producto="item"></lista-productos>
+</div>
+
