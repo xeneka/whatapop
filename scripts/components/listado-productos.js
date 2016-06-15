@@ -11,7 +11,7 @@ angular
 
 
 
-        controller:function(ServiceWhatapop){
+        controller:function(ProductService,CategoryService){
 
             var self = this;
             self.productoSeleccionado="";
@@ -19,12 +19,19 @@ angular
             var totalProductos={};
 
             self.$onInit = function() {
-                ServiceWhatapop.getProducts().then(function(respuesta){
-                    //console.log(respuesta);
+                ProductService.getProducts().then(function(respuesta){
+                    console.log(respuesta);
                     totalProductos = respuesta.data;
                     self.productos = totalProductos;
 
-                })
+                });
+
+                CategoryService.getCategories().then(function(respuesta){
+                   self.categories = respuesta.data;
+                   self.category="";
+
+                    
+                });
 
 
             };
@@ -50,6 +57,22 @@ angular
                     });
 
                 }
+            }
+
+            self.updateCategories = function(){
+
+                self.productos = totalProductos.filter(function (item) {
+
+                    if (item.category.id == self.category.id) {
+                        console.log("entro");
+                        return true;
+                    }
+                    return false;
+
+                });
+
+
+
             }
 
         }

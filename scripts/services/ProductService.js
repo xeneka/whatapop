@@ -3,7 +3,7 @@
  */
 angular
     .module("whatapop")
-    .service("ServiceWhatapop" ,['$http','$filter', function($http,$filter){
+    .service("ProductService" ,['$http','$filter', function($http,$filter){
 
         // Cojo todos lo productos
         this.getProducts = function() {
@@ -15,6 +15,14 @@ angular
         this.getProduct = function(productId) {
             return this.getProducts().then(function(response) {
                 return $filter("filter")(response.data, {"id": productId})[0];
+            });
+        };
+
+        // Cojo los productos de una categoria
+        this.getProductsbyCategory = function(categorieId) {
+            return this.getProducts().then(function(response) {
+                console.log(response.data.category);
+                return $filter("filter")(response.data.category, {"id":1})[0];
             });
         };
 
