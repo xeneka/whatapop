@@ -11,22 +11,10 @@
 </nav>
 
 
-<!--<div class="row">
-
-    <input type="text" class="form-control" placeholder="Buscar" name="srch-term" id="srch-term" ng-model="$ctrl.productoSeleccionado">
-    <button class="btn btn-primary"  ng-click="$ctrl.updateFilter()"><i class="glyphicon glyphicon-search"></i></button>
-    <label>Categorias
-        <select ng-model="$ctrl.category" ng-options="categoria.name for categoria in $ctrl.categories" ng-change="$ctrl.updateCategories()"></select>
-    </label>
-
-
-
-
-</div>-->
 <br><br>
 <div class="container-fluid">
 <div class="row">
-    <!--<buscador></buscador>-->
+
 
     <lista-productos ng-repeat="item in $ctrl.productos" producto="item"></lista-productos>
 </div>

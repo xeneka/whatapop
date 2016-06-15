@@ -4,6 +4,8 @@
 angular
     .module("whatapop")
     .component("detalleArticulo", {
+
+
         
         templateUrl:"views/detalle-articulo.html",
 
@@ -18,6 +20,8 @@ angular
                     self.producto=respuesta;
                     self.imagen = ProductService.obtenerRutaImagenAbsoluta(self.producto.photos[0]);
                     self.descripcion =$sce.trustAsHtml(self.producto.description);
+                    console.log(self.producto);
+                    
                     
                 });
 
