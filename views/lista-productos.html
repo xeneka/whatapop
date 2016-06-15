@@ -1,8 +1,13 @@
 <div class="col-md-3">
 
-    <h3>Nombre:{{ productoSeleccionado.name }}</h3>
+    <h3 class="alert alert-success">{{ productoSeleccionado.name |eliminaplataforma }}</h3>
+    <br>
+    <img src="{{ imagenvideo }}" class="img-thumbnail">
 
-    <a ng-link="['DetalleArticulo', { id: producto.id }]">Detalles</a>
+    <div ng-bind-html="productoSeleccionado.description | resumen">Nombre:{{ productoSeleccionado.description | resumen }}</div>
+
+    <a ng-link="['DetalleArticulo', { id: producto.id }]" class="btn btn-primary">Detalles</a>
+    <p class="badge">{{ productoSeleccionado.name |plataforma }} </p>
 </div>
 
 

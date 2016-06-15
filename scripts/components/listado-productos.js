@@ -64,7 +64,7 @@ angular
                 self.productos = totalProductos.filter(function (item) {
 
                     if (item.category.id == self.category.id) {
-                        console.log("entro");
+
                         return true;
                     }
                     return false;

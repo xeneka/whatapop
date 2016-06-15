@@ -18,13 +18,7 @@ angular
             });
         };
 
-        // Cojo los productos de una categoria
-        this.getProductsbyCategory = function(categorieId) {
-            return this.getProducts().then(function(response) {
-                console.log(response.data.category);
-                return $filter("filter")(response.data.category, {"id":1})[0];
-            });
-        };
+        
 
         // Montamos la ruta absoluta a la imagen indicada.
         this.obtenerRutaImagenAbsoluta = function(rutaRelativa) {

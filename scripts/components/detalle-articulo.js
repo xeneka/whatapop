@@ -14,12 +14,11 @@ angular
             self.$routerOnActivate = function(next) {
                 var id = next.params.id;
                 var datos=ProductService.getProduct(id).then(function(respuesta){
-                    console.log(respuesta);
+                    
                     self.producto=respuesta;
                     self.imagen = ProductService.obtenerRutaImagenAbsoluta(self.producto.photos[0]);
                     self.descripcion =$sce.trustAsHtml(self.producto.description);
-                    console.log(self.descripcion);
-                    console.log(self.producto.description);
+                    
                 });
 
                

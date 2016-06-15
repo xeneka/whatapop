@@ -1,6 +1,17 @@
-<br><br><br><br>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+        <li><input type="text" class="form-control" placeholder="Buscar" name="srch-term" id="srch-term" ng-model="$ctrl.productoSeleccionado"></li>
+        <li><button class="btn btn-primary"  ng-click="$ctrl.updateFilter()"><i class="glyphicon glyphicon-search"></i></button></li>
+        <li><label>Categorias
+            <select ng-model="$ctrl.category" ng-options="categoria.name for categoria in $ctrl.categories" ng-change="$ctrl.updateCategories()"></select>
+        </label></li>
+    </ul>
+    </div>
+</nav>
 
-<div class="row">
+
+<!--<div class="row">
 
     <input type="text" class="form-control" placeholder="Buscar" name="srch-term" id="srch-term" ng-model="$ctrl.productoSeleccionado">
     <button class="btn btn-primary"  ng-click="$ctrl.updateFilter()"><i class="glyphicon glyphicon-search"></i></button>
@@ -11,11 +22,13 @@
 
 
 
-</div>
-
+</div>-->
+<br><br>
+<div class="container-fluid">
 <div class="row">
     <!--<buscador></buscador>-->
 
     <lista-productos ng-repeat="item in $ctrl.productos" producto="item"></lista-productos>
 </div>
-
+</div>
+<br><br>

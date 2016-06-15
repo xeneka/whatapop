@@ -4,7 +4,7 @@
 
 angular
     .module("whatapop")
-    .directive("listaProductos" , [function(){
+    .directive("listaProductos" , ['ProductService',function(ProductService){
       
         return {
             
@@ -18,7 +18,8 @@ angular
 
                 //console.log(scope);
                 scope.productoSeleccionado = scope.producto;
-
+                scope.imagenvideo = ProductService.obtenerRutaImagenAbsoluta(scope.productoSeleccionado.photos[0]);
+                console.log(scope.imagenvideo);
 
             }
         }

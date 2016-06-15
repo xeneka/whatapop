@@ -3,7 +3,7 @@
  */
 // Setter de la aplicacion
 
-angular.module('whatapop', ["ngComponentRouter"]);
+angular.module('whatapop', ["ngComponentRouter", "ngSanitize"]);
 
 // configuramos el proveedor '$locationProvider'. Establecemos el modo de navegacion html para que funcione el single page apllicacion
 
