@@ -1,7 +1,7 @@
 <br><br><br>
 
 <div class="row">
-    <h1 class="text-center">{{$ctrl.producto.name}}</h1>
+    <h1 class="text-center">{{$ctrl.producto.name | eliminaplataforma}}</h1>
     <div class ="col-md-3">
     <img src="{{ $ctrl.imagen }}"/>
 
@@ -13,14 +13,13 @@
         <div class="separated"></div>
         <div class="col-md-8">
         <h3>Datos Relevantes</h3>
-        <p>Fecha Publicación: {{$ctrl.producto.published_date | date:'dd-MM-yyyy'}} Precio {{ $ctrl.producto.price |currency:"EUR€"}}</p>
+        <p><b>Fecha Publicación:</b> {{$ctrl.producto.published_date | date:'dd-MM-yyyy'}} <b>Precio</b> {{ $ctrl.producto.price |currency:"EUR€"}}
+        <br><b>Plataforma:</b>{{$ctrl.producto.name | plataforma}}
+        </p>
         </div>
         <div class="col-md-3">
-            {{$ctrl.producto.seller.id}}
-
-            <!-- Este es el que me da PROBLEMAS -->
-
             <seller idseller=$ctrl.producto.seller.id></seller>
         </div>
+        <a class="btn btn-danger" ng-link="['ListadoProductos']">Volver al listado</a>
 </div>
 </div>

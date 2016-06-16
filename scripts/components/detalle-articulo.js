@@ -5,6 +5,9 @@ angular
     .module("whatapop")
     .component("detalleArticulo", {
 
+        bindings: {
+            $router: "<"
+        },
 
         
         templateUrl:"views/detalle-articulo.html",
@@ -20,7 +23,7 @@ angular
                     self.producto=respuesta;
                     self.imagen = ProductService.obtenerRutaImagenAbsoluta(self.producto.photos[0]);
                     self.descripcion =$sce.trustAsHtml(self.producto.description);
-                    console.log(self.producto);
+                    //console.log(self.producto);
                     
                     
                 });
@@ -28,6 +31,10 @@ angular
                
                 
             };
+            
+            self.paginaprincipal=function(){
+                self.$router.navigate(["ListadoProductos"]);
+            }
 
     }
 

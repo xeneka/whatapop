@@ -10,7 +10,7 @@ angular
             var pos1 = texto.indexOf('[');
             var pos2 = texto.indexOf(']');
 
-            console.log(texto,pos1,pos2);
+          
 
             return texto.substr(pos1+1,pos2-pos1-1);
         }
