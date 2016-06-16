@@ -3,11 +3,11 @@
  */
 angular
     .module("whatapop")
-    .service("ProductService" ,['$http','$filter', function($http,$filter){
+    .service("ProductService" ,['$http','$filter','setting', function($http,$filter,setting){
 
         // Cojo todos lo productos
         this.getProducts = function() {
-               return $http.get("http://localhost:8000/api/products");
+               return $http.get(setting.urlServidor+"/api/products");
            };
 
         
@@ -24,7 +24,7 @@ angular
         this.obtenerRutaImagenAbsoluta = function(rutaRelativa) {
 
             return rutaRelativa
-                ? ("http://localhost:8000/" + rutaRelativa)
+                ? (setting.urlServidor+"/" + rutaRelativa)
                 : undefined;
         };
 

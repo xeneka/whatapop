@@ -6,7 +6,7 @@ angular
     .component("detalleArticulo", {
 
         bindings: {
-            $router: "<"
+          
         },
 
         
@@ -32,8 +32,8 @@ angular
                 
             };
             
-            self.paginaprincipal=function(){
-                self.$router.navigate(["ListadoProductos"]);
+        this.actualizaWebLocal=function(id){
+                
             }
 
     }
