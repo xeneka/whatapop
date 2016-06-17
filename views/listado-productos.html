@@ -6,6 +6,9 @@
         <li><label>Categorias
             <select ng-model="$ctrl.category" ng-options="categoria.name for categoria in $ctrl.categories" ng-change="$ctrl.updateCategories()"></select>
         </label></li>
+            <li><label>Favoritos
+                <select ng-model="$ctrl.favorito" ng-options="favorito.name for favorito in $ctrl.favoritos" ng-change="$ctrl.selectFavoritos()"></select>
+            </label></li>
     </ul>
     </div>
 </nav>

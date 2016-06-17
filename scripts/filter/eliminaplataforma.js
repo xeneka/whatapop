@@ -6,7 +6,7 @@ angular
     .filter("eliminaplataforma", [function(){
 
         return function(texto){
-
+            
             var pos1 = texto.indexOf('[');
             return texto.substr(0,pos1);
         }

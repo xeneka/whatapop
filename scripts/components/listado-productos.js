@@ -11,7 +11,7 @@ angular
 
 
 
-        controller:function(ProductService,CategoryService){
+        controller:function(ProductService,CategoryService,location, WebLocal,$location){
 
             var self = this;
             self.productoSeleccionado="";
@@ -20,9 +20,10 @@ angular
 
             self.$onInit = function() {
                 ProductService.getProducts().then(function(respuesta){
-                    console.log(respuesta);
+                    //console.log(respuesta);
                     totalProductos = respuesta.data;
                     self.productos = totalProductos;
+                    console.log(self.productos);
 
                 });
 
@@ -32,6 +33,10 @@ angular
 
                     
                 });
+
+                self.favoritos=WebLocal.recover();
+
+
 
 
             };
@@ -74,6 +79,14 @@ angular
 
 
             }
+
+
+            self.selectFavoritos = function(){
+
+                $location.path('/detalle-articulo/'+self.favorito.id)
+                
+            }
+
 
         }
 

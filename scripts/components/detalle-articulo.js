@@ -12,7 +12,7 @@ angular
         
         templateUrl:"views/detalle-articulo.html",
 
-        controller: function(ProductService,$sce){
+        controller: function(ProductService,$sce,WebLocal){
             var self=this;
 
             
@@ -32,8 +32,11 @@ angular
                 
             };
             
-        this.actualizaWebLocal=function(id){
-                
+        self.favorito=function(){
+
+            
+            WebLocal.save({id:self.producto.id, name:self.producto.name});
+            
             }
 
     }

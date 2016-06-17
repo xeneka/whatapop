@@ -19,7 +19,7 @@ angular
                 //console.log(scope);
                 scope.productoSeleccionado = scope.producto;
                 scope.imagenvideo = ProductService.obtenerRutaImagenAbsoluta(scope.productoSeleccionado.photos[0]);
-                console.log(scope.imagenvideo);
+                //console.log(scope.imagenvideo);
 
             }
         }
