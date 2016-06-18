@@ -9,10 +9,13 @@
             <li><label>Favoritos
                 <select ng-model="$ctrl.favorito" ng-options="favorito.name for favorito in $ctrl.favoritos" ng-change="$ctrl.selectFavoritos()"></select>
             </label></li>
+            <li><label>Distancias
+                <select ng-model="$ctrl.distancias" ng-options="dist.id for dist in $ctrl.grupodistancias" ng-change="$ctrl.updateDistance()"></select>
+            </label></li>
     </ul>
     </div>
 </nav>
-
+{{$ctrl.grupodistancias}}
 
 <br><br>
 <div class="container-fluid">
